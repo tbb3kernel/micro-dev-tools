@@ -22,12 +22,12 @@ def handle_response(response: requests.Response) -> dict | None:
 
 def get_forecast_response(latitude: float, longitude: float) -> dict | None:
 	response = requests.get(FORECAST_URL,
-							params={
-								"latitude": latitude,
-								"longitude": longitude,
-								"hourly": "temperature_2m",
-								"forecast_days": 1,
-							})
+				params={
+					"latitude": latitude,
+					"longitude": longitude,
+					"hourly": "temperature_2m",
+					"forecast_days": 1,
+				})
 	response = handle_response(response)
 	return response
 	
