@@ -51,6 +51,7 @@ def main() -> None:
 		print(json.dumps(response, indent=2))
 	else:
 		print("Failed to get forecast data.")
+		exit(1)
 
 if __name__ == "__main__":
 	main()
